@@ -1,0 +1,99 @@
+body{
+  width: 100%;
+  height: 100%;
+}
+.input_fields{
+  display :grid;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 35px 0 40px 0;
+}
+.outlined-basic{
+  width: 500px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#big{
+  display: flex;
+  flex-wrap: wrap;
+  height: 100px;
+}
+.button{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+}
+.button_{
+  width: 400px;
+}
+.error{
+  display: flex;
+  justify-content: center;
+  margin: 0 0 18px 0;
+}
+.text-login{
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: underline;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 35px 0 30px 0;
+}
+.login-container{
+  display: flex;
+  flex-direction: column;
+  width: 37%;
+  margin: 60px auto;
+  border: 1px solid rgb(188, 140, 233);
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.login-input{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 22px;
+}
+.login-button{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  gap: 14px;
+  margin: 25px 0 50px 0;
+}
+.signup-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 14px;
+    margin: 10px 0 45px 0;
+}
+._button{
+  width: 33%;
+}
+.logout-button{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  gap: 30px;
+  margin-top: 20px;
+}
+._button1{
+  width: 12%;
+}
+.container{
+  padding: 0 0 40px 0;
+}
+.app-description{
+  display: flex;
+  margin-left: auto;
+  font-size: 30px;
+  justify-self: center;
+
+}
