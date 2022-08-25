@@ -62,7 +62,7 @@ const {handleSubmit , values , handleChange , handleBlur , errors , touched} =
 
   axios ({
     method : 'post',
-    url : 'https://localhost:9002/send',
+    url : 'http://localhost:9002/send',
     data: {
       fullName: mailData.fullName,
       email: mailData.email,

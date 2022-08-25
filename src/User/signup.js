@@ -37,7 +37,7 @@ export function Signup(){
 
 
     const signup = (signupData) => {
-        fetch("https://localhost:9002/signup",
+        fetch("http://localhost:9002/signup",
         // fetch("https://mail-tool.herokuapp.com/signup",
         {
           method : "POST",

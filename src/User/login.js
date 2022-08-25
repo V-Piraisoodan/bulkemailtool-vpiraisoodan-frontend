@@ -38,7 +38,7 @@ export function Login(){
 
         axios({
             method: 'POST',
-            url: 'https://localhost:9002/login',
+            url: 'http://localhost:9002/login',
             // url: 'https://mail-tool.herokuapp.com/login',
             data: {
               mail: loginData.mail,
