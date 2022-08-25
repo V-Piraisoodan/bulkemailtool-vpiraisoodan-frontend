@@ -37,9 +37,9 @@ export function Login(){
     const login = (loginData) => {
 
         axios({
-            method: 'post',
-            // url: 'http://localhost:9002/login',
-            url: 'https://mail-tool.herokuapp.com/login',
+            method: 'POST',
+            url: 'https://localhost:9002/login',
+            // url: 'https://mail-tool.herokuapp.com/login',
             data: {
               mail: loginData.mail,
               password: loginData.password
@@ -47,7 +47,7 @@ export function Login(){
           })
           .then(function(res){
             const ans = res.status;
-
+            // console.log(res.headers)
             if(ans == "200")
               {
                 const output = <div className='error' style={{color:"green"}}>Welcome boss ..!! Successfully Login...✔️</div>
