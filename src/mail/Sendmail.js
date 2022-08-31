@@ -111,84 +111,96 @@ const {handleSubmit , values , handleChange , handleBlur , errors , touched} =
   return (
     <form className='container' onSubmit={handleSubmit}>
       <div className='input_fields'>
+        <div className='demo'>
+        <TextField className="outlined-basic" 
+          color="primary" 
+          size='small' label="Enter a full name" 
+          variant="outlined" value={values.fullName} 
+          name='fullName'
+          onChange={handleChange}
+          onBlur={handleBlur}
+          error={errors.fullName && touched.fullName}
+          helperText= {errors.fullName && touched.fullName ? errors.fullName : ""}
+          placeholder="Enter a full name"
+        /></div>
        
-          <TextField className="outlined-basic" 
-           color="primary" 
-           size='small' label="Enter a full name" 
-           variant="outlined" value={values.fullName} 
-           name='fullName'
-           onChange={handleChange}
-           onBlur={handleBlur}
-           error={errors.fullName && touched.fullName}
-           helperText= {errors.fullName && touched.fullName ? errors.fullName : ""}
-           placeholder="Enter a full name" />
-       
-          <TextField className="outlined-basic" 
-           color="primary" size='small' 
-           label="Enter a sender email" 
-           variant="outlined" value={values.email} 
-           name='email'
-           onChange={handleChange}
-           onBlur={handleBlur}
-           error={errors.email && touched.email}
-           helperText= {errors.email && touched.email ? errors.email : ""}
-           placeholder="Enter a mail" />
+        <div className='demo'>
+        <TextField className="outlined-basic" 
+          color="primary" size='small' 
+          label="Enter a sender email" 
+          variant="outlined" value={values.email} 
+          name='email'
+          onChange={handleChange}
+          onBlur={handleBlur}
+          error={errors.email && touched.email}
+          helperText= {errors.email && touched.email ? errors.email : ""}
+          placeholder="Enter a mail" 
+        /></div>
+        <div className='demo'>
+        <TextField className="outlined-basic" 
+          color="primary" size='small' 
+          label="Subject" variant="outlined" value={values.subject}
+          name='subject'
+          onChange={handleChange}
+          onBlur={handleBlur}
+          error={errors.subject && touched.subject}
+          helperText= {errors.subject && touched.subject ? errors.subject : ""} 
+          placeholder="Enter a subject"
+        /></div>
+        
+        <div className='demo'>
+        <TextField className="outlined-basic" 
+          color="primary" size='small' 
+          label="Enter a to email" variant="outlined" value={values.to} 
+          name='to'
+          onChange={handleChange}
+          onBlur={handleBlur}
+          error={errors.to && touched.to}
+          helperText= {errors.to && touched.to ? errors.to : ""}
+          placeholder="Enter a to mail" 
+        /></div>
 
-          <TextField className="outlined-basic" 
-           color="primary" size='small' 
-           label="Subject" variant="outlined" value={values.subject}
-           name='subject'
-           onChange={handleChange}
-           onBlur={handleBlur}
-           error={errors.subject && touched.subject}
-           helperText= {errors.subject && touched.subject ? errors.subject : ""} 
-           placeholder="Enter a subject" />
-
-          <TextField className="outlined-basic" 
-           color="primary" size='small' 
-           label="Enter a to email" variant="outlined" value={values.to} 
-           name='to'
-           onChange={handleChange}
-           onBlur={handleBlur}
-           error={errors.to && touched.to}
-           helperText= {errors.to && touched.to ? errors.to : ""}
-           placeholder="Enter a to mail" />
-
-          <TextField className="outlined-basic" 
-           id="big"
-           color="primary" size='small' 
-           label="Enter a bcc" variant="outlined" value={values.bcc} 
-           name='bcc'
-           multiline
-           rows='5'
-           onChange={handleChange}
-           onBlur={handleBlur}
-           error={errors.bcc && touched.bcc}
-           helperText= {errors.bcc && touched.bcc ? errors.bcc : ""}
-           placeholder="Enter bcc with comma seperated  eg:abc@gmail.com,xyz@gmail.com" />
-
-          <TextField className="outlined-basic" 
-           id="big"
-           color="primary" size='small' 
-           label="Enter a message" variant="outlined" value={values.message} 
-           name='message'
-           multiline
-           rows='5'
-           onChange={handleChange}
-           onBlur={handleBlur}
-           error={errors.message && touched.message}
-           helperText= {errors.message && touched.message ? errors.message : ""}
-           placeholder="Enter a message" />
+        <div className='demo'>
+        <TextField className="outlined-basic" 
+          id="big"
+          color="primary" size='small' 
+          label="Enter a bcc" variant="outlined" value={values.bcc} 
+          name='bcc'
+          multiline
+          rows='5'
+          onChange={handleChange}
+          onBlur={handleBlur}
+          error={errors.bcc && touched.bcc}
+          helperText= {errors.bcc && touched.bcc ? errors.bcc : ""}
+          placeholder="Enter bcc with comma seperated  eg:abc@gmail.com,xyz@gmail.com" 
+        /></div>
+        
+        <div className='demo'>
+        <TextField className="outlined-basic" 
+          id="big"
+          color="primary" size='small' 
+          label="Enter a message" variant="outlined" value={values.message} 
+          name='message'
+          multiline
+          rows='5'
+          onChange={handleChange}
+          onBlur={handleBlur}
+          error={errors.message && touched.message}
+          helperText= {errors.message && touched.message ? errors.message : ""}
+          placeholder="Enter a message"
+        /></div>
    
-          <TextField className="outlined-basic" 
-           color="primary" size='small' 
-           label="Enter a valid picture Url" variant="outlined" value={values.url} 
-           name='url'
-           onChange={handleChange}
-           onBlur={handleBlur}
-           error={errors.url && touched.url}
-           helperText= {errors.url && touched.url ? errors.url : ""}
-           placeholder="eg : https://www.picture.jpg" />
+        <div className='demo'>
+        <TextField className="outlined-basic" 
+          color="primary" size='small' 
+          label="Enter a valid picture Url" variant="outlined" value={values.url} 
+          name='url'
+          onChange={handleChange}
+          onBlur={handleBlur}
+          error={errors.url && touched.url}
+          helperText= {errors.url && touched.url ? errors.url : ""}
+          placeholder="eg : https://www.picture.jpg"
+         /> </div>
       </div>
       <div className='logout-button'>
         <Button className='_button1' variant="contained" type='submit' endIcon={<SendIcon/>}> Send </Button>
