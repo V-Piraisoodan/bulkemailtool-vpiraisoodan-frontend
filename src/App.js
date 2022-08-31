@@ -44,7 +44,7 @@ function App() {
           <Toolbar>
      
             <Button onClick={()=>history.push('/login')}
-              size="large" color="inherit" aria-label="login">
+              size="large" className='appbar-name' color="inherit" aria-label="login">
               Login
             </Button>
 
