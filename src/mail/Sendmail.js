@@ -62,7 +62,7 @@ const {handleSubmit , values , handleChange , handleBlur , errors , touched} =
 
   axios ({
     method : 'post',
-    url : 'https://bulk-emailapp.herokuapp.com/send',
+    url : 'https://bulkemailtool-vpiraisoodan-backend.vercel.app/send',
     data: {
       fullName: mailData.fullName,
       email: mailData.email,

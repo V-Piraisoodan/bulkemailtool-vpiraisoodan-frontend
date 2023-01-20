@@ -38,7 +38,7 @@ export function Login(){
 
         axios({
             method: 'POST',
-            url: 'https://bulk-emailapp.herokuapp.com/login',
+            url: 'https://bulkemailtool-vpiraisoodan-backend.vercel.app/login',
             data: {
               mail: loginData.mail,
               password: loginData.password
