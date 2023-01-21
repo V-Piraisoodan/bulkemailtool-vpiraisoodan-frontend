@@ -38,7 +38,7 @@ export function Login(){
 
         axios({
             method: 'POST',
-            url: 'https://bulkemailtool-vpiraisoodan-backend.vercel.app/login',
+            url: 'https://bulk-email-tool.onrender.com/login',
             data: {
               mail: loginData.mail,
               password: loginData.password

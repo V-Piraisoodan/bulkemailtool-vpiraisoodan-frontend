@@ -37,7 +37,7 @@ export function Signup(){
 
 
     const signup = (signupData) => {
-        fetch("https://bulkemailtool-vpiraisoodan-backend.vercel.app/signup",
+        fetch("https://bulk-email-tool.onrender.com/signup",
         {
           method : "POST",
           body : JSON.stringify(signupData),
