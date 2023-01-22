@@ -95,8 +95,8 @@ const {handleSubmit , values , handleChange , handleBlur , errors , touched} =
      }})
   .catch((err)=>{console.log(err);
     console.log(err)
-    const text = err.response.statusText;
-    if(text === "Unauthorized")
+    const text = err.response.status;
+    if(text === 401)
      {
       alert("please login and try again latter")
       setTimeout( later,1000)
