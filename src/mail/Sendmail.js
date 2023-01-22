@@ -98,7 +98,7 @@ const {handleSubmit , values , handleChange , handleBlur , errors , touched} =
     const text = err.response.status;
     if(text === 401)
      {
-      alert("please login and try again latter")
+      alert("Please login and try again latter")
       setTimeout( later,1000)
       return
     }
