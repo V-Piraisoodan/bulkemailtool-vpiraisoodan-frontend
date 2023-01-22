@@ -80,13 +80,15 @@ const {handleSubmit , values , handleChange , handleBlur , errors , touched} =
   .then((res)=>{
      const text = res.status;
      console.log(res)
+     console.log("res.sta1",res.status)
      if(text === "Unauthorized")
      {
       alert("please login and try again latter")
       setTimeout( later,1000)
       return
     }
-     if(text == "200"){
+     if(text === 200){
+      console.log("mail send successfully")
       alert("Mail send successfully")
       window.location.reload()
       return
