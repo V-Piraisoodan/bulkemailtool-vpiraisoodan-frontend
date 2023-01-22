@@ -78,7 +78,7 @@ const {handleSubmit , values , handleChange , handleBlur , errors , touched} =
 
   })
   .then((res)=>{
-     const text = res.statusText;
+     const text = res.status;
      console.log(res)
      if(text === "Unauthorized")
      {
@@ -86,12 +86,13 @@ const {handleSubmit , values , handleChange , handleBlur , errors , touched} =
       setTimeout( later,1000)
       return
     }
-     if(text === "OK"){
+     if(text == "200"){
       alert("Mail send successfully")
       window.location.reload()
       return
      }})
   .catch((err)=>{console.log(err);
+    console.log(err)
     const text = err.response.statusText;
     if(text === "Unauthorized")
      {
