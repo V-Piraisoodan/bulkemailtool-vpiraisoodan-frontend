@@ -5,10 +5,18 @@ import { useHistory } from 'react-router-dom';
 import {useFormik} from "formik";
 import * as yup from "yup";
 
+import { InputAdornment } from '@mui/material';
+import {IconButton } from '@mui/material';
+import { Visibility } from '@mui/icons-material';
+import { VisibilityOff } from '@mui/icons-material';
+
 export function Signup(){
 
     const [ output,setOutput] = useState("");
     const history = useHistory();
+    const [showPassword, setShowPassword] = useState(false);
+    const handleClickShowPassword = () => setShowPassword(!showPassword);
+    const handleMouseDownPassword = () => setShowPassword(!showPassword);
 
     const formValidationSchema = yup.object ({
         mail :yup
@@ -83,7 +91,9 @@ return (
        helperText= {errors.mail && touched.mail ? errors.mail : ""}
        placeholder="Enter a mail id" />
 
-      <TextField id="outlined-basic" 
+      <TextField id="outlined-basic1" 
+       autoComplete="on"
+       aria-invalid="false"
        color="primary" size='small' 
        label="Enter a password" 
        variant="outlined" value={values.password}
@@ -92,7 +102,21 @@ return (
        onBlur={handleBlur}
        error={errors.password && touched.password}
        helperText={errors.password && touched.password ? errors.password : ""}
-       placeholder="Enter a password" />
+       placeholder="Enter a password" 
+       type={showPassword ? "text" : "password"} // <-- This is where the magic happens
+       InputProps={{ // <-- This is where the toggle button is added.
+         endAdornment: (
+           <InputAdornment position="end">
+             <IconButton
+               aria-label="toggle password visibility"
+               onClick={handleClickShowPassword}
+               onMouseDown={handleMouseDownPassword}
+             >
+               {showPassword ? <Visibility /> : <VisibilityOff />}
+               </IconButton>
+      </InputAdornment>
+    )
+  }}/>
        
        <div className='error'>{output}</div>
     </div>
